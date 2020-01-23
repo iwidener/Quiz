@@ -1,50 +1,18 @@
-var startButton = document.getElementById("start");
-
-var questionContainerElement = document.getElementById("question-container");
-
-let shuffledQuestions;
-
-let currentQuestionIndex = 0;
-
-var questionElement = document.getElementById("questions");
-
-var answerButtonElement = document.getElementById("answer-buttons");
-
-document.addEventListener("click", startQuiz);
-
-function startQuiz() {
-    console.log("Started");
-    shuffledQuestions = questions.sort(() =>Math.random() - .5);
-    questionContainerElement.classList.remove("hide");
-    startButton.classList.add("hide");
-    showQuestion();
-}
-
-
-function showQuestion(question) {
-    questionElement.innerText = shuffledQuestions[currentQuestionIndex].title
-}
-
-function selectAnswer() {
-
-
-}
-
 var questions = [
     {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts"
+        title: "Commonly used data types DO NOT include:",
+        choices: ["strings", "booleans", "alerts", "numbers"],
+        answer: "alerts"
     },
     {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer: "parentheses"
+        title: "The condition in an if / else statement is enclosed within ____.",
+        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+        answer: "parentheses"
     },
     {
         title: "Inside which HTML element do we put the JavaScript?",
-        choices: ["<js>", "<javascript>", "<scripting>", "<script>"],
-        answer: "<script>"
+        choices: ["js", "javascript", "scripting", "script"],
+        answer: "script"
     },
     {
         title: "Which event occurs when the user clicks on an HTML element?",
@@ -81,5 +49,4 @@ var questions = [
         choices: ["font-style", "text-style", "text-size", "font-size"],
         answer: "font-size"
     },
-  ];
-  
+];

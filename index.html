@@ -13,24 +13,68 @@
 
 <body>
 
+    <div class="header">
+
+        <h2 id="highscores">View Highscores</h2>
+
+        <div id="main">
+            <h2 class="countdown"></h2>
+        </div>
+    </div>
+
+
     <div class="container">
+
+
         <div id="question-container" class="hide">
-            <div id="questions">Question</div>
+            <div id="questions">Question<span class="question-number">1</span> of <span class="total-questions"></span>
+            </div>
+            
             <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+                <button id="btn1"><span class="answer" id="answer1"></span></button>
+                <button id="btn2"><span class="answer" id="answer2"></span></button>
+                <button id="btn3"><span class="answer" id="answer3"></span></button>
+                <button id="btn4"><span class="answer" id="answer4"></span></button>
+            </div>
+            <hr>
+            <p id="message"></p>
+        </div>
+
+
+
+        <div class="controls">
+            <div id="instructions-container">
+                <div id="instructions">
+                    <h1>Coding Quiz Challenge</h1>
+                    <h4>Click the "Start Quiz" button to begin a test.</h4>
+                    <h4>Score is calculated by time remaining. Answering quickly and correctly results in a higher
+                        score.</h4>
+                    <h4>Answering incorrectly results in a time penalty (15 seconds are subtracted from time
+                        remaining).
+                    </h4>
+                    <h4>The users are presented with their final score and asked to enter their initials.</h4>
+
+                    <button id="start" class="start-btn">Start Quiz</button>
+
+                </div>
             </div>
         </div>
 
-        <div class="controls">
-            <button id="start" class="start-btn">Start Quiz</button>
-        
-        </div>
+       
 
-    </div>
-    <script src="questions.js"></script>
+            <div id="results">
+            <h2>All done!</h2>
+            
+            <form action="final-score">
+                Enter initials: <input type="text" name="usrname"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div> 
+      
+
+        <script src="questions.js"></script>
+        <script src="script.js"></script>
 
 </body>
 
