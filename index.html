@@ -7,29 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz</title>
 
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
-    <div class="header">
-
-        <h2 id="highscores">View Highscores</h2>
-
-        <div id="main">
-            <h2 class="countdown"></h2>
-        </div>
+    <div class="main">
+        <div class="header"><a href="highscores.html">View Highscores</a></div>
+        <div class="countdown"></div>
     </div>
-
 
     <div class="container">
 
+        <div class="controls">
+            <div id="instructions-container" class="instructions">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Click the "Start Quiz" button to begin a test.<br>
+                    <br>
+                    Score is calculated by time remaining.<br>
+                    <br>
+                    Answering quickly and correctly results in a higher score.<br>
+                    <br>
+                    Answering incorrectly results in a time penalty (15 seconds are subtracted from time remaining).<br>
+                    <br>
+                    The users are presented with their final score and asked to enter their initials.</p>
+                <button id="start" class="start-btn">Start Quiz</button>
+            </div>
+        </div>
 
         <div id="question-container" class="hide">
             <div id="questions">Question<span class="question-number">1</span> of <span class="total-questions"></span>
             </div>
-            
+
             <div id="answer-buttons" class="btn-grid">
                 <button id="btn1"><span class="answer" id="answer1"></span></button>
                 <button id="btn2"><span class="answer" id="answer2"></span></button>
@@ -40,41 +48,19 @@
             <p id="message"></p>
         </div>
 
-
-
-        <div class="controls">
-            <div id="instructions-container">
-                <div id="instructions">
-                    <h1>Coding Quiz Challenge</h1>
-                    <h4>Click the "Start Quiz" button to begin a test.</h4>
-                    <h4>Score is calculated by time remaining. Answering quickly and correctly results in a higher
-                        score.</h4>
-                    <h4>Answering incorrectly results in a time penalty (15 seconds are subtracted from time
-                        remaining).
-                    </h4>
-                    <h4>The users are presented with their final score and asked to enter their initials.</h4>
-
-                    <button id="start" class="start-btn">Start Quiz</button>
-
-                </div>
-            </div>
-        </div>
-
-       
-
-            <div id="results">
+        <div id="results" class="hide">
             <h2>All done!</h2>
-            
+            <p>Your final score is <span id="final-score"></span></p>
+
             <form action="final-score">
                 Enter initials: <input type="text" name="usrname"><br>
                 <input type="submit" value="Submit">
             </form>
         </div>
-    </div> 
-      
+    </div>
 
-        <script src="questions.js"></script>
-        <script src="script.js"></script>
+    <script src="./questions.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 
