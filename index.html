@@ -12,8 +12,8 @@
 
 <body>
     <div class="main">
-        <div class="header"><a href="highscores.html">View Highscores</a></div>
-        <div class="countdown"></div>
+        <div class="scores"><a href="highscores.html">View Highscores</a></div>
+        <div class="countdown">Time: <span id="time">0</span></div>
     </div>
 
     <div class="container">
@@ -35,27 +35,28 @@
         </div>
 
         <div id="question-container" class="hide">
-            <div id="questions">Question<span class="question-number">1</span> of <span class="total-questions"></span>
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices">
+                <!-- <div id="questions">Question<span class="question-number">1</span> of <span class="total-questions"></span> -->
             </div>
 
-            <div id="answer-buttons" class="btn-grid">
+            <!-- <div id="answer-buttons" class="btn-grid">
                 <button id="btn1"><span class="answer" id="answer1"></span></button>
                 <button id="btn2"><span class="answer" id="answer2"></span></button>
                 <button id="btn3"><span class="answer" id="answer3"></span></button>
                 <button id="btn4"><span class="answer" id="answer4"></span></button>
-            </div>
+            </div> -->
             <hr>
-            <p id="message"></p>
+            <div id="message" class="message hide"></div>
         </div>
 
         <div id="results" class="hide">
             <h2>All done!</h2>
-            <p>Your final score is <span id="final-score"></span></p>
-
-            <form action="final-score">
-                Enter initials: <input type="text" name="usrname"><br>
-                <input type="submit" value="Submit">
-            </form>
+            <p>Your final score is <span id="final-score"></span>.</p>
+            <p>
+                Enter initials: <input type="text" id="initials" max="3"><br>
+                <button id="submit">Submit</button>
+            </p>
         </div>
     </div>
 

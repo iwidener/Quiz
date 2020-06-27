@@ -94,6 +94,7 @@ button#start.start-btn {
     border-color: indigo;
 }
 
+
 .controls {
     display: flex;
     justify-content: center;
@@ -137,6 +138,35 @@ div.countdown {
     font-weight: bold;
     padding-top: 15px;
     padding-right: 100px;
+}
+
+/* Buttons from Highscores page */
+
+button#return {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: white;
+    background-color: blueviolet;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+button#clear {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 35px;
+    color: white;
+    background-color: blueviolet;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
 }
 
 /* Responsive Application */
