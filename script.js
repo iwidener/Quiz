@@ -3,20 +3,13 @@ var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var countdownId;
 
-
 // var startButton = document.getElementById("start");
 
 var questionContainerElement = document.getElementById("question-container");
 
 // var resultsElement = document.getElementById("results");
-
-
 // var shuffledQuestions;
-
-
-
 // var shuffledChoices;
-
 // var currentChoicesIndex = 0;
 
 // variables to reference DOM elements
@@ -31,26 +24,21 @@ var messageElement = document.getElementById("message");
 var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
 
-
 // var btn1 = document.getElementById("answer1");
 // var btn2 = document.getElementById("answer2");
 // var btn3 = document.getElementById("answer3");
 // var btn4 = document.getElementById("answer4");
-
-
 // var totalQuestions = questions.length;
 
 // user clicks button to start quiz
 startBtn.onclick = startQuiz;
 
 // startButton.addEventListener("click", startQuiz);
-
 // document.addEventListener("click", function (event) {
 //     if (event.target.classList.contains("answer")) {
 //         showAnswers(event)
 //     }
 // })
-
 // resultsElement.remove("hide");
 
 function startQuiz() {
@@ -65,14 +53,10 @@ function startQuiz() {
 
     // start countdown
     // countdownId = setInterval(clockActive, 1000);
-
     // show starting time
     // countdownElement.textContent = time;
-
     // setTime();
     // shuffledQuestions = questions.sort(() => Math.random() - .5);
-
-
     // startButton.classList.add("hide");
 
     showQuestion();
@@ -108,11 +92,8 @@ function showQuestion() {
         choicesElement.appendChild(choiceNode);
     });
 
-
     //questionNumberSpan.innerHTML = index+1;
-
     // questionsElement.innerText = questions[currentQuestionIndex].title;
-
     // btn1.innerHTML = questions[currentQuestionIndex].choices[0];
     // btn2.innerHTML = questions[currentQuestionIndex].choices[1];
     // btn3.innerHTML = questions[currentQuestionIndex].choices[2];
@@ -224,6 +205,9 @@ function saveHighscore() {
 
         // to save to local storage
         highscores.push(newScore);
+        window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+        // redirect to the nect page
         window.location.href = "highscores.html";
     }
 }
