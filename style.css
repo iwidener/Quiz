@@ -42,15 +42,17 @@ div.container {
     font-weight: bold;
 }
 
-.btn-grid {
+div#choices.choices {
     display: grid;
     width: 200px;
     height: 280px;
-    margin: 20px;
+    margin-top: 50px;
+    margin-left: 70px;
+    padding-bottom: 20px;
     gap: 20px;
 }
 
-#btn1, #btn2, #btn3, #btn4  {
+button.choice  {
     background-color: blueviolet;
     border: 1px solid blueviolet;
     color: white;
@@ -59,10 +61,7 @@ div.container {
     font-size: 16px;
 }
 
-#btn1:hover,
-#btn2:hover,
-#btn3:hover,
-#btn4:hover {
+button.choice {
     background-color: indigo;
     border-color: indigo;
 }
@@ -73,7 +72,8 @@ div.container {
     font-weight: bold;
     font-style: italic;
     text-align: left;
-    padding: 2px 35px;
+    margin-left: 70px;
+    padding-top: 15px;
 }
 
 button#start.start-btn {
@@ -93,7 +93,6 @@ button#start.start-btn {
     background-color: indigo;
     border-color: indigo;
 }
-
 
 .controls {
     display: flex;
